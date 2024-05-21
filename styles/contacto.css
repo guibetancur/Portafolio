@@ -1,0 +1,59 @@
+#contact {
+  height: 400px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+#contact img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.infocontact {
+  display: flex;
+  flex-direction: column;
+}
+
+.infocontact p {
+  color: burlywood;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+.grupo label {
+  color: azure;
+}
+
+input {
+  border: none;
+}
+.grupo {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border-bottom: thin solid gray;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: rgb(173, 166, 166);
+  font-size: x-small;
+}
+
+button {
+  background-color: blue;
+  color: white;
+}
+
+textarea {
+  resize: none;
+  field-sizing: content;
+  max-height: 100px;
+  max-width: 400px;
+}
+
+@media (max-width: 520px) {
+  #contact img {
+    display: none;
+  }
+}

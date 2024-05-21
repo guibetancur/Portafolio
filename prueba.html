@@ -1,0 +1,52 @@
+<head>
+  <meta charset=”utf-8″ />
+  <title>Prueba de gráfica HTML con Canvas y JavaScript</title>
+
+  <style>
+     canvas {
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+    </style>
+
+</head>
+
+<!-- <body onload="drawPie(ctx, 150,150,150, Math.PI/2, Math.PI/2 + Math.PI/4, 'cyan')"> -->
+  <body>
+  <canvas id="myCanvas1" class="gbCanvas">6.5</canvas>
+  <canvas id="myCanvas2" class="gbCanvas">7</canvas>
+  <canvas id="myCanvas3" class="gbCanvas">8</canvas>
+  <canvas id="myCanvas4" class="gbCanvas">9.5</canvas>
+  <canvas id="myCanvas5" class="gbCanvas">4</canvas>
+  <canvas id="myCanvas6" class="gbCanvas">6</canvas>
+
+    <script>
+      const myCanvas = document.getElementById('myCanvas');
+      const gbCanvas = document.getElementsByClassName('gbCanvas')
+      for (let i = 0; i < gbCanvas.length; i++) {
+        const iterator = gbCanvas[i];
+        iterator.width=100
+        iterator.height=100
+        // Colores aleatorios para las tortas
+        let color = "#"
+        let simbolos= "0123456789ABCDEF"
+        for (var col = 0; col < 6; col++) {
+          color = color + simbolos[Math.floor(Math.random() * 16)]
+        }
+        // El quinto y sexto parámetros, dibujan la línea desde el cero del eje x hasta 2PI
+        // La circunferencia completa es 2PI, por eso se divide por 10 (o 100) y se multiplica por i (%) 
+        // Entonces, cuando se requiera el 70%, i debe ser 7, para el 67%, i debe ser 6.7
+        // drawPie(iterator.getContext('2d'), 50, 50, 47, 0, Math.PI*2/10*(i+1), color)
+        drawPie(iterator.getContext('2d'), 50, 50, 47, 0, Math.PI*2/10*iterator.firstChild.data, color)
+      }
+
+      function drawPie(ctx, centerX, centerY, radius, startAngle, endAngle, color) {
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+        ctx.closePath();
+        ctx.fill();
+      }
+    </script>
+</body>

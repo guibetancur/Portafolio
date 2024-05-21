@@ -1,0 +1,42 @@
+.profile {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* p {
+  text-align: justify;
+} */
+.profile img {
+  border-radius: 50%;
+  object-fit: cover;
+  height:min-content;
+}
+
+img {
+  width: 20%;
+  shape-outside: url('./assets/foto.png');
+  shape-image-threshold: 0.5;
+  shape-margin: 10px;
+  float: right;
+}
+
+#modo {
+  content: '\e80b';
+}
+
+.title_network {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+} */
+
+.title_network>u>img {
+  width: 100%;
+}

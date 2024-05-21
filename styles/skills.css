@@ -1,0 +1,21 @@
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skills ul li {
+  border: 1px solid white;
+  padding: .5em;
+  min-width: 100px;
+  width: 9%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.5vw;
+}
+
+canvas {
+  border: 1px solid white;
+  border-radius: 50%;
+}

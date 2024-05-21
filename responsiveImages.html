@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Images</title>
+  <!-- Para bloquear el botón derecho del mouse en la página -->
+  <script>
+    document.addEventListener('contextmenu', function (e) { e.preventDefault(); e.stopPropagation(); });
+    document.addEventListener('copy', function (e) { e.preventDefault(); e.stopPropagation(); });
+    document.addEventListener('cut', function (e) { e.preventDefault(); e.stopPropagation(); });
+  </script>
+  <style>
+    .jw-album-image img,
+    .jw-element-image img {
+      pointer-events: none;
+      -webkit-touch-callout: none;
+    }
+
+    .pswp__share-tooltip .pswp__share--download {
+      display: none;
+    }
+  </style>
+
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Responsive Image Gallery</h1>
+    <p>Resize the browser window to see the responsive effect.</p>
+  </div>
+
+  <!-- Photo Grid -->
+  <div class="row">
+    <div class="column">
+      <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%" alt="img x">
+    </div>
+
+    <div class="column">
+      <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%" alt="img x">
+    </div>
+
+    <div class="column">
+      <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%" alt="img x">
+    </div>
+
+    <div class="column">
+      <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%" alt="img x">
+      <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%" alt="img x">
+    </div>
+  </div>
+
+</body>
+
+</html>
+<!-- 
+  Para Crhome
+  .mansory {
+    display: mansory;
+    mansory-template-tracks: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: 1rem;
+  }
+
+  Para Safari
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    grid-template-rows: mansory;
+    gap: 1rem;
+  }
+
+  Para Firefox:
+  main {
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr) 9ch);
+    grid-template-rows: mansory;
+    article, footer {
+      display: grid;
+      grid-template-columns; subgrid;
+    }
+    header, article { grid-column: span 2;}
+  }
+
+ -->
